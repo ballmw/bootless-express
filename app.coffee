@@ -1,6 +1,8 @@
 express = require 'express'
 stylus = require 'stylus'
+
 assets = require 'connect-assets'
+
 less = require 'less'
 fs = require 'fs'
 _ = require 'underscore'
@@ -17,11 +19,15 @@ else
   client = redis.createClient()
 
 app = express.createServer()
+
 app.use assets()
+
+app.use express.static(__dirname + '/public')
+
 app.use express.bodyParser()
 
 app.set 'view engine', 'ejs'
-  
+
 app.get '/', (req, resp) -> resp.render 'index'
 
 app.post '/', (req, resp) -> 
