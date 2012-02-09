@@ -11,6 +11,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <%- css('jquery.miniColors') %>
     <%- css('bootstrap') %>
     <%- css('bootstrap-responsive') %>
 
@@ -19,10 +20,12 @@
     <%- js('json2') %>
     <%- js('backbone') %>
     <%- js('bootless') %>
+    <%- js('jquery.miniColors') %>
 
 <script type="text/javascript">
 $(function () {
   window.app = new App.BootlessView('#app');
+  $('input.color').miniColors();
 });
 </script>
 </head>

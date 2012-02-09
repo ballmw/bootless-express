@@ -28,7 +28,10 @@ app.post '/', (req, resp) ->
   less_variables = ""
   console.log req.body
   _.map req.body, (value, key) -> 
-    less_variables += "@#{key} : #{value};\n"
+    if(value.indexOf('#') > -1)
+      less_variables += "@#{key} : #{value};\n"
+    else
+      less_variables += "@#{key} : #{value}px;\n"
   console.log less_variables
   fs.readFile './bootstrap/less/variables.less', (err, data) ->
     console.log err
