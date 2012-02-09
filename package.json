@@ -25,5 +25,5 @@
     "mocha": "*"
     , "should": "*"
   }
-  , "engine": "node ~> 0.6.x"
+  , "engine": "node ~> 0.4.7"
 }

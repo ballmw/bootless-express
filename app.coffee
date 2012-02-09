@@ -17,8 +17,9 @@ app.get '/', (req, resp) -> resp.render 'index'
 
 app.post '/', (req, resp) -> 
   less_variables = ""
+  console.log req.body
   _.map req.body, (value, key) -> 
-    less_variables = "@#{key} : #{value};\n"
+    less_variables += "@#{key} : #{value};\n"
   console.log less_variables
   fs.readFile './bootstrap/less/variables.less', (err, data) ->
     console.log err
@@ -43,7 +44,6 @@ app.get '/less', (req, resp) ->
   if req.param('id') != null
     client.get req.param('id'), (err, reply) ->
       console.log err
-      console.log 'get from redis:' + reply
       resp.send reply.toString(), { 'Content-Type': 'text/css' }, 200
     
 app.listen process.env.VMC_APP_PORT or 3000, -> console.log 'Listening...'
