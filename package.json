@@ -16,6 +16,7 @@
     , "underscore": "*"
     , "redis-url":"0.0.1"
     , "redis":"*"
+    , "ejs":"*"
   }
   , "scripts": {
     "test": "mocha"
