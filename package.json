@@ -14,7 +14,7 @@
     , "less": "1.1.6"
     , "jqtpl": "*"
     , "underscore": "*"
-    , "redis-url":"*"
+    , "redis-url":"0.0.1"
     , "redis":"*"
   }
   , "scripts": {
