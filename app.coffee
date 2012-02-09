@@ -46,4 +46,4 @@ app.get '/less', (req, resp) ->
       console.log err
       resp.send reply.toString(), { 'Content-Type': 'text/css' }, 200
     
-app.listen process.env.VMC_APP_PORT or 3000, -> console.log 'Listening...'
+app.listen process.env.PORT or 3000, -> console.log 'Listening...'
