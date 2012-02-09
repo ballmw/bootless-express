@@ -4,12 +4,12 @@ assets = require 'connect-assets'
 less = require 'less'
 fs = require 'fs'
 _ = require 'underscore'
-redis  = require "redis"
+redis  = require "redis-url".connect(process.env.REDISTOGO_URL)
 
 app = express.createServer()
 app.use assets()
 app.use express.bodyParser()
-client = redis.createClient()
+client = redis.createClient(process.env.REDISTOGO_URL)
 
 app.set 'view engine', 'ejs'
   
