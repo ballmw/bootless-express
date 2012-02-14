@@ -19,11 +19,10 @@
     , "ejs":"*"
   }
   , "scripts": {
-    "test": "mocha"
-    , "start": "node server.js"
+    "start": "node server.js"
   }
   , "devDependencies": {
-    "mocha": "*"
+    "jasmine-node": "*"
     , "should": "*"
   }
   , "engine": "node ~> 0.4.7"
