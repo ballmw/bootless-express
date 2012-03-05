@@ -19,11 +19,13 @@
     , "ejs":"*"
   }
   , "scripts": {
-    "start": "node server.js"
+      "start": "node server.js"
   }
   , "devDependencies": {
-    "jasmine-node": "*"
+      "jasmine-node": "*"
     , "should": "*"
+    , "jsdom" : "*"
+    , "jquery": "*"
   }
   , "engine": "node ~> 0.4.7"
 }
