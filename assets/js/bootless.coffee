@@ -5,7 +5,7 @@ class App.BootlessView extends Backbone.View
       'click #refresh' : 'submit'
     initialize : ->
       console.log $(@el_id).length
-      @css_link_template = _.template "<link rel='stylesheet' href='/less?id=<%= stylesheet %>'>"
+      @css_link_template = _.template "<link rel='stylesheet' href='/css/<%= stylesheet %>'>"
       @el = $(@el_id)[0]
       console.log (@el)
       this.render()
@@ -27,3 +27,7 @@ class App.BootlessView extends Backbone.View
     modifyHead : (data) =>
       link = @css_link_template ({stylesheet:data.stylesheet})
       $('head').append(link)
+      $('#css').attr('href', "/css/#{data.stylesheet}")
+      $('#css').attr('disabled', false)
+      $('#less').attr('href', "/less/#{data.stylesheet}")
+      $('#less').attr('disabled', false)

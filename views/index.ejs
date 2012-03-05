@@ -25,11 +25,14 @@
     <form method="POST" class="form-horizontal" disabled="true">
         <div class="row">
             <div class="page-header">
-                <h1>Bootstrap variables <small>LESS variables, their values, and usage guidelines</small></h1>
+                <h1>BootLESS</h1>
+                <small>Customize, click "Apply", download your CSS, repeat...</small>
             </div>
-            <a style="position:fixed; right:-10px" href="#" id="refresh" class="btn btn-large btn-primary"><i class="icon-search"></i>Refresh</a>
-            <a style="position:fixed; top:210px; right:-10px" disabled="true" href="#" id="css" class="btn">Download CSS</a>
-            <a style="position:fixed; top:240px; right:-10px" disabled="true" href="#" id="less" class="btn">Download LESS</a>
+            <div style="position:fixed; top:50px; right:10px; z-index: 1999; opacity: 0.8; padding:10px;">
+            <a href="#" id="refresh" class="btn btn-large btn-primary">Apply</a>
+            <a disabled="true" target="_new" href="#" id="css" class="btn">Download CSS</a>
+            <a disabled="true" target="_new" href="#" id="less" class="btn">Download LESS</a>
+            </div>
         </div>
         <section>
             <div class="row">
@@ -469,13 +472,13 @@
                         <div class="control-group">
                             <label class="control-label" for="warningText">@warningText</label>
                             <div class="controls">
-                                <input type="text" name="waringText" value="#f3edd2" class="color input-mini">
+                                <input type="text" name="warningText" value="#c09853" class="color input-mini">
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="warningBackground">@warningBackground</label>
                             <div class="controls">
-                                <input type="text" name="warningBackground" value="#c09853" class="color input-mini">
+                                <input type="text" name="warningBackground" value="#f3edd2" class="color input-mini">
                             </div>
                         </div>
                         <div class="control-group">
