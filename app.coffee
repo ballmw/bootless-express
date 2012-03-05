@@ -28,11 +28,14 @@ app.use express.bodyParser()
 
 app.set 'view engine', 'ejs'
 
+app.get '/', (req, res) ->
+  res.render 'index', {id:null}
 app.get '/:id', (req, res) ->
   if (req.params.id != null) 
-    res.render 'index', {id:req.params.id}
+    getless req.params.id, (less)->
+      res.render 'index', {id:req.params.id, less:less}
   else
-    res.render 'index'
+    res.render 'index', {id:null}
 
 app.post '/', (req, res) -> 
   less_variables = ""
