@@ -2,7 +2,7 @@ class App.BootlessView extends Backbone.View
     constructor : ( @el_id ) ->
       this.initialize()
     events : 
-      'click input[type=submit]' : 'submit'
+      'click #refresh' : 'submit'
     initialize : ->
       console.log $(@el_id).length
       @css_link_template = _.template "<link rel='stylesheet' href='/less?id=<%= stylesheet %>'>"

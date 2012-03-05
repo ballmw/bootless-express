@@ -11,9 +11,13 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel='stylesheet' href='/css/jquery.miniColors.css'>
-    <!-- wha? -->
     <link rel='stylesheet' href='/css/bootstrap.css'>
+    <link rel='stylesheet' href='/css/jquery.miniColors.css'>
+    <style>
+        input{
+            height:24px;
+        }
+    </style>
 
     <%- js('jquery-1.7.1.min') %>
     <%- js('underscore') %>
@@ -33,6 +37,14 @@ $(function () {
     new App.BootlessView('#app');
     $('input.color').miniColors();
   });
+  
+  $('input[type=range]').change(function(event)
+    {
+      var siblings = $(event.currentTarget).siblings();
+      var val = $(event.currentTarget).val();
+      siblings.html(val);
+    }
+  );
 });
 </script>
 </head>

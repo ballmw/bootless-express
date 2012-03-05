@@ -1,234 +1,318 @@
-
-<form method="POST">
-<input type="submit" class="btn btn-primary"><a href="">Link to the current CSS</a>
-<section id="variables">
-  <div class="page-header">
-    <h1>Bootstrap variables <small>LESS variables, their values, and usage guidelines</small></h1>
-  </div>
-
-  <div class="row">
-    <div class="span6">
-      <h3>Hyperlinks</h3>
-      <table class="table table-bordered table-striped">
-        <tbody>
-          <tr>
-            <td class="span2" data-twipsy="Default link text color"><code>@linkColor</code></td>
-            <td><input type="text" name="linkColor" value="#08c" class="color"></td>
-          </tr>
-          <tr>
-            <td data-twipsy="Default link text hover color"><code>@linkColorHover</code></td>
-            <td><code>darken(@linkColor, 15%)</code></td>
-          </tr>
-        </tbody>
-      </table>
-      <h3>Grid system</h3>
-      <table class="table table-bordered table-striped">
-        <tbody>
-          <tr>
-            <td><code>@gridColumns</code></td>
-            <td>12</td>
-          </tr>
-          <tr>
-            <td><code>@gridColumnWidth</code></td>
-            <td>60px</td>
-          </tr>
-          <tr>
-            <td><code>@gridGutterWidth</code></td>
-            <td>20px</td>
-          </tr>
-          <tr>
-            <td><code>@fluidGridColumnWidth</code></td>
-            <td>6.382978723%</td>
-          </tr>
-          <tr>
-            <td><code>@fluidGridGutterWidth</code></td>
-            <td>2.127659574%</td>
-          </tr>
-        </tbody>
-      </table>
-      <h3>Typography</h3>
-      <table class="table table-bordered table-striped">
-        <tbody>
-          <tr>
-            <td><code>@baseFontSize</code></td>
-            <td><input type="range" value="13" min="8" max="17" id="baseFontSize" name="baseFontSize"></td>
-          </tr>
-          <tr>
-            <td><code>@baseFontFamily</code></td>
-            <td><code>"Helvetica Neue", Helvetica, Arial, sans-serif</code></td>
-          </tr>
-          <tr>
-            <td><code>@baseLineHeight</code></td>
-            <td><input type="range" value="18" min="8" max="27" id="baseLineHeight" name="baseLineHeight"></td>
-          </tr>
-          <tr>
-            <td><code>@textColor</code></td>
-            <td><input type="text" value="#333" name="textColor" class="color"></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="span6">
-      <h3>Grayscale colors</h3>
-      <table class="table table-bordered table-striped">
-        <tbody>
-          <tr>
-            <td><code>@black</code></td>
-            <td><input type="text" name="black" value="#000" class="color"></td>
-          </tr>
-          <tr>
-            <td><code>@grayDarker</code></td>
-            <td><input type="text" name="grayDarker" value="#222" class="color"></td>
-          </tr>
-          <tr>
-            <td><code>@grayDark</code></td>
-            <td><input type="text" name="grayDark" value="#333" class="color"></td>
-          </tr>
-          <tr>
-            <td><code>@gray</code></td>
-            <td><input type="text" name="gray" value="#555" class="color"></td>
-          </tr>
-          <tr>
-            <td><code>@grayLight</code></td>
-            <td><input type="text" name="grayLight" value="#999" class="color"></td>
-          </tr>
-          <tr>
-            <td><code>@grayLight</code></td>
-            <td><input type="text" name="grayLight" value="#eee" class="color"></td>
-          </tr>
-          <tr>
-            <td><code>@white</code></td>
-            <td><input type="text" name="white" value="#fff" class="color"></td>
-          </tr>
-        </tbody>
-      </table>
-      <h3>Accent colors</h3>
-      <table class="table table-bordered table-striped">
-        <tbody>
-          <tr>
-            <td><code>@blue</code></td>
-            <td><input type="text" name="blue" value="#049cdb" class="color"></td>
-          </tr>
-          <tr>
-            <td><code>@green</code></td>
-            <td><input type="text" name="green" value="#46a546" class="color"></td>
-          </tr>
-          <tr>
-            <td><code>@red</code></td>
-            <td><input type="text" name="red" value="#9d261d" class="color"></td>
-          </tr>
-          <tr>
-            <td><code>@yellow</code></td>
-            <td><input type="text" name="yellow" value="#ffc40d" class="color"></td>
-          </tr>
-          <tr>
-            <td><code>@orange</code></td>
-            <td><input type="text" name="orange" value="#f89406" class="color"></td>
-          </tr>
-          <tr>
-            <td><code>@pink</code></td>
-            <td><input type="text" name="pink" value="#c3325f" class="color"></td>
-          </tr>
-          <tr>
-            <td><code>@purple</code></td>
-            <td><input type="text" name="purple" value="#7a43b6" class="color"></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div> <!-- /row -->
-
-  <h3>Components</h3>
-  <div class="row">
-    <div class="span6">
-      <h4>Buttons</h4>
-      <table class="table table-bordered table-striped">
-        <tbody>
-          <tr>
-            <td><code>@primaryButtonBackground</code></td>
-            <td><input type="text" name="primaryButtonBackground" value="#08c" class="color"></td>
-          </tr>
-        </tbody>
-      </table>
-      <h4>Forms</h4>
-      <table class="table table-bordered table-striped">
-        <tbody>
-          <tr>
-            <td><code>@placeholderText</code></td>
-            <td><input type="text" name="placeholderText" value="#999" class="color"></td>
-          </tr>
-        </tbody>
-      </table>
-      <h4>Navbar</h4>
-      <table class="table table-bordered table-striped">
-        <tbody>
-          <tr>
-            <td><code>@navbarHeight</code></td>
-            <td><input type="range" min="0" max="150" value="40" id="navbarHeight" name="navbarHeight" data-type="px"/></td>
-          </tr>
-          <tr>
-            <td><code>@navbarBackground</code></td>
-            <td><input type="text" name="navbarBackground" class="color" value="#222"></td>
-          </tr>
-          <tr>
-            <td><code>@navbarBackgroundHighlight</code></td>
-            <td><input name="navbarBackgroundHighlight" value="#333" class="color" type="text"></td>
-          </tr>
-          <tr>
-            <td><code>@navbarText</code></td>
-            <td><input type="text" name="navbarText" class="color" value="#999"></td>
-          </tr>
-          <tr>
-            <td><code>@navbarLinkColor</code></td>
-            <td><input type="text" name="navbarLinkColor" class="color" value="#999"></td>
-          </tr>
-          <tr>
-            <td><code>@navbarLinkColorHover</code></td>
-            <td><input type="text" name="navbarLinkColorHover" class="color" value="#fff"></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="span6">
-      <h4>Form states and alerts</h4>
-      <table class="table table-bordered table-striped">
-        <tbody>
-          <tr>
-            <td><code>@warningText</code></td>
-            <td><input type="text" name="waringText" value="#f3edd2" class="color"></td>
-          </tr>
-          <tr>
-            <td><code>@warningBackground</code></td>
-            <td><input type="text" name="warningBackground" value="#c09853" class="color"></td>
-          </tr>
-          <tr>
-            <td><code>@errorText</code></td>
-            <td><input type="text" name="errorText" value="#b94a48" class="color"></td>
-          </tr>
-          <tr>
-            <td><code>@errorBackground</code></td>
-            <td><input type="text" name="errorBackground" value="#f2dede" class="color"></td>
-          </tr>
-          <tr>
-            <td><code>@successText</code></td>
-            <td><input type="text" name="successText" value="#468847" class="color"></td>
-          </tr>
-          <tr>
-            <td><code>@successBackground</code></td>
-            <td><input type="text" name="successBackground" value="#dff0d8" class="color"></td>
-          </tr>
-          <tr>
-            <td><code>@infoText</code></td>
-            <td><input type="text" name="infoText" value="#3a87ad" class="color"></td>
-          </tr>
-          <tr>
-            <td><code>@infoBackground</code></td>
-            <td><input type="text" name="infoBackground" value="#d9edf7" class="color"></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div><!-- /row -->
-
-</section>
+<form method="POST" class="form-horizontal">
+    <section id="variables">
+        <div class="page-header">
+            <h1>Bootstrap variables <small>LESS variables, their values, and usage guidelines</small></h1>
+        </div>
+        <a href="#" id="refresh" class="btn btn-large btn-primary"><i class="icon-search"></i>Refresh</a>
+        <a href="#" id="css" class="btn">Download CSS</a>
+        <a href="#" id="less" class="btn">Download LESS</a>
+        <div class="row">
+            <div class="span6">
+                <h2>Hyperlinks</h2>
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" class="control-label" for="linkColor">@linkColor</label>
+                        <div class="controls">
+                            <input type="text" name="linkColor" value="#08c" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" class="control-label" for="linkColorHover" data-twipsy="Default link text hover color">@linkColorHover</label>
+                        <div class="controls">
+                            <code>
+                                darken(@linkColor, 15%)
+                            </code>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn" data-examples="hyperlinks">
+                            Examples
+                        </button>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <h2>Grid system</h2>
+                    <div class="control-group">
+                        <label class="control-label" for="gridColumns">@gridColumns</label>
+                        <div class="controls">
+                            <code>
+                                12
+                            </code>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="gridColumnWidth">@gridColumnWidth</label>
+                        <div class="controls">
+                            <code>
+                                60px
+                            </code>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="gridGutterWidth">@gridGutterWidth</label>
+                        <div class="controls">
+                            <code>
+                                20px
+                            </code>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="fluidGridColumnWidth">@fluidGridColumnWidth</label>
+                        <div class="controls">
+                            <code>
+                                6.382978723
+                            </code>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="fluidGridGutterWidth">@fluidGridGutterWidth</label>
+                        <div class="controls">
+                            <code>
+                                2.127659574%
+                            </code>
+                        </div>
+                    </div>
+                </fieldset>
+                <h2>Typography</h2>
+                <div class="control-group">
+                    <label class="control-label" for="baseFontSize">@baseFontSize</label>
+                    <div class="controls">
+                        <span>13</span><input type="range" value="13" min="8" max="17" id="baseFontSize" name="baseFontSize" class="input-mini">
+                        
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="baseFontFamily">@baseFontFamily</label>
+                    <div class="controls">
+                        <code>
+                            "Helvetica Neue", Helvetica, Arial, sans-serif
+                        </code>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="baseLineHeight">@baseLineHeight</label>
+                    <div class="controls">
+                        <span>18</span>
+                        <input type="range" value="18" min="8" max="27" id="baseLineHeight" name="baseLineHeight">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="textColor">@textColor</label>
+                    <div class="controls">
+                        <input type="text" value="#333" name="textColor" class="color input-mini">
+                    </div>
+                </div>
+                </fieldset>
+            </div>
+            <div class="span6">
+                <h2>Grayscale colors</h2>
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="black">@black</label>
+                        <div class="controls">
+                            <input type="text" name="black" value="#000" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="grayDarker">@grayDarker</label>
+                        <div class="controls">
+                            <input type="text" name="grayDarker" value="#222" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="grayDark">@grayDark</label>
+                        <div class="controls">
+                            <input type="text" name="grayDark" value="#333" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="gray">@gray</label>
+                        <div class="controls">
+                            <input type="text" name="gray" value="#555" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="grayLight">@grayLight</label>
+                        <div class="controls">
+                            <input type="text" name="grayLight" value="#999" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="grayLight">@grayLighter</label>
+                        <div class="controls">
+                            <input type="text" name="grayLighter" value="#eee" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="white">@white</label>
+                        <div class="controls">
+                            <input type="text" name="white" value="#fff" class="color input-mini">
+                        </div>
+                    </div>
+                </fieldset>
+                <h2>Accent colors</h2>
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="blue">@blue</label>
+                        <div class="controls">
+                            <input type="text" name="blue" value="#049cdb" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="green">@green</label>
+                        <div class="controls">
+                            <input type="text" name="green" value="#46a546" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="red">@red</label>
+                        <div class="controls">
+                            <input type="text" name="red" value="#9d261d" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="yellow">@yellow</label>
+                        <div class="controls">
+                            <input type="text" name="yellow" value="#ffc40d" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="orange">@orange</label>
+                        <div class="controls">
+                            <input type="text" name="orange" value="#f89406" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="pink">@pink</label>
+                        <div class="controls">
+                            <input type="text" name="pink" value="#c3325f" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="purple">@purple</label>
+                        <div class="controls">
+                            <input type="text" name="purple" value="#7a43b6" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn" data-examples="hyperlinks">
+                            Examples
+                        </button>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <!-- /row -->
+        <h2>Components</h2>
+        <div class="row">
+            <div class="span6">
+                <h3>Buttons</h3>
+                <div class="control-group">
+                    <label class="control-label" for="primaryButtonBackground">@primaryButtonBackground</label>
+                    <div class="controls">
+                        <input type="text" name="primaryButtonBackground" value="#08c" class="color input-mini">
+                    </div>
+                </div>
+                <h3>Forms</h3>
+                <div class="control-group">
+                    <label class="control-label" for="placeholderText">@placeholderText</label>
+                    <div class="controls">
+                        <input type="text" name="placeholderText" value="#999" class="color input-mini">
+                    </div>
+                </div>
+                <h3>Navbar</h3>
+                <div class="control-group">
+                    <label class="control-label" for="navbarHeight">@navbarHeight</label>
+                    <div class="controls">
+                        <span>40</span>
+                        <input type="range" class="input-mini" min="0" max="150" value="40" id="navbarHeight" name="navbarHeight" data-type="px">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="navbarBackground">@navbarBackground</label>
+                    <div class="controls">
+                        <input type="text" name="navbarBackground" class="color input-mini" value="#222">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="navbarBackgroundHighlight">@navbarBackgroundHighlight</label>
+                    <div class="controls">
+                        <input name="navbarBackgroundHighlight" value="#333" class="color input-mini" type="text">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="navbarText">@navbarText</label>
+                    <div class="controls">
+                        <input type="text" name="navbarText" class="color input-mini" value="#999">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="navbarLinkColor">@navbarLinkColor</label>
+                    <div class="controls">
+                        <input type="text" name="navbarLinkColor" class="color input-mini" value="#999">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="navbarLinkColorHover">@navbarLinkColorHover</label>
+                    <div class="controls">
+                        <input type="text" name="navbarLinkColorHover" class="color input-mini" value="#fff">
+                    </div>
+                </div>
+                </fieldset>
+            </div>
+            <div class="span6">
+                <h3>Form states and alerts</h3>
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="warningText">@warningText</label>
+                        <div class="controls">
+                            <input type="text" name="waringText" value="#f3edd2" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="warningBackground">@warningBackground</label>
+                        <div class="controls">
+                            <input type="text" name="warningBackground" value="#c09853" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="errorText">@errorText</label>
+                        <div class="controls">
+                            <input type="text" name="errorText" value="#b94a48" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="errorBackground">@errorBackground</label>
+                        <div class="controls">
+                            <input type="text" name="errorBackground" value="#f2dede" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="successText">@successText</label>
+                        <div class="controls">
+                            <input type="text" name="successText" value="#468847" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="successBackground">@successBackground</label>
+                        <div class="controls">
+                            <input type="text" name="successBackground" value="#dff0d8" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="infoText">@infoText</label>
+                        <div class="controls">
+                            <input type="text" name="infoText" value="#3a87ad" class="color input-mini">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="infoBackground">@infoBackground</label>
+                        <div class="controls">
+                            <input type="text" name="infoBackground" value="#d9edf7" class="color input-mini">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div><!-- /row -->
+    </section>
 </form>
