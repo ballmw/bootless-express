@@ -31,39 +31,37 @@ app.set 'view engine', 'ejs'
 app.get '/', (req, resp) -> resp.render 'index'
 
 app.post '/', (req, resp) -> 
-
+  less_variables = ""
   console.log req.body
-  client.incr 'nextId', (err, id) ->
-    console.log 'next id : ' + id
-    client.set id, JSON.stringify(req.body), (err, reply) ->
-      console.log "error creating css: " + err
-      resp.json({ stylesheet: id })
+  _.map req.body, (value, key) -> 
+    if(value.indexOf('#') > -1)
+      less_variables += "@#{key} : #{value};\n"
+    else
+      less_variables += "@#{key} : #{value}px;\n"
+  console.log less_variables
+  fs.readFile './bootstrap/less/variables.less', (err, data) ->
+    console.log err
+    template = data;
+    fs.readFile './bootstrap/less/bootstrap.less', (err, data) ->
+      console.log err
+      tobeparsed = template + '\n' + data + '\n' + less_variables
+      parser = new(less.Parser)( 
+        paths: ['./bootstrap/less/']
+      )
+      parser.parse tobeparsed, (e, tree) ->
+        console.log e
+        css = tree.toCSS({ compress: true })
+        client.incr 'nextId', (err, id) ->
+          console.log 'next id : ' + id
+          client.set id, css, (err, reply) ->
+            console.log "error creating css: " + err
+            resp.json({ stylesheet: id });
 
 app.get '/less', (req, resp) -> 
   console.log 'id:' + req.param('id')
   if req.param('id') != null
     client.get req.param('id'), (err, reply) ->
       console.log err
-      less_variables = ""
-      values = JSON.parse(reply)
-      console.log values
-      _.map values, (value, key) -> 
-        if(value.indexOf('#') > -1)
-          less_variables += "@#{key} : #{value};\n"
-        else
-          less_variables += "@#{key} : #{value}px;\n"
-      console.log less_variables
-      fs.readFile './bootstrap/less/bootstrap.less', (err, data) ->
-        console.log err
-        tobeparsed = data + '\n' + less_variables
-        parser = new(less.Parser)( 
-          paths: ['./bootstrap/less/']
-        )
-        parser.parse tobeparsed, (e, tree) ->
-          console.log 'parsed less'
-          console.log e
-          css = tree.toCSS({ compress: true })
-          console.log css
-          resp.send css, { 'Content-Type': 'text/css' }, 200
-
+      resp.send reply.toString(), { 'Content-Type': 'text/css' }, 200
+    
 app.listen process.env.PORT or 3000, -> console.log 'Listening...'

@@ -11,7 +11,7 @@
     , "markdown": "*"
     , "uglify-js": "*"
     , "dep-graph": "*"
-    , "less": "1.1.6"
+    , "less": "1.2.0"
     , "jqtpl": "*"
     , "underscore": "*"
     , "redis-url":"0.0.1"
