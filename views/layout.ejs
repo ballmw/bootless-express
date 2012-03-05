@@ -19,13 +19,20 @@
     <%- js('underscore') %>
     <%- js('json2') %>
     <%- js('backbone') %>
-    <%- js('bootless') %>
     <%- js('jquery.miniColors') %>
+    <%- js('require.js') %>
+    
 
 <script type="text/javascript">
+
+    window.App = new Object(); 
+
 $(function () {
-  window.app = new App.BootlessView('#app');
-  $('input.color').miniColors();
+  require(['js/bootless'], function(bootless)
+  {
+    new App.BootlessView('#app');
+    $('input.color').miniColors();
+  });
 });
 </script>
 </head>

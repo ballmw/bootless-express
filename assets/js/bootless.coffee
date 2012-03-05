@@ -1,6 +1,4 @@
-App = new Object()
-$ () ->
-  class App.BootlessView extends Backbone.View
+class App.BootlessView extends Backbone.View
     constructor : ( @el_id ) ->
       this.initialize()
     events : 
