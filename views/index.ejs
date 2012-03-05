@@ -22,7 +22,7 @@
     </div>
 </div>
 <div style="clear:left;">
-    <form method="POST" class="form-horizontal">
+    <form method="POST" class="form-horizontal" disabled="true">
         <div class="row">
             <div class="page-header">
                 <h1>Bootstrap variables <small>LESS variables, their values, and usage guidelines</small></h1>
@@ -59,53 +59,54 @@
                     <a href="#"><b>Hover over this bold link.</b></a>
                 </div>
             </div>
+            <!--
             <div class="row">
-                <div class="span6">
-                    <fieldset>
-                        <h2 id="grid">Grid system</h2>
-                        <div class="control-group">
-                            <label class="control-label" for="gridColumns">@gridColumns</label>
-                            <div class="controls">
-                                <code>
-                                    12
-                                </code>
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label" for="gridColumnWidth">@gridColumnWidth</label>
-                            <div class="controls">
-                                <code>
-                                    60px
-                                </code>
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label" for="gridGutterWidth">@gridGutterWidth</label>
-                            <div class="controls">
-                                <code>
-                                    20px
-                                </code>
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label" for="fluidGridColumnWidth">@fluidGridColumnWidth</label>
-                            <div class="controls">
-                                <code>
-                                    6.382978723
-                                </code>
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label" for="fluidGridGutterWidth">@fluidGridGutterWidth</label>
-                            <div class="controls">
-                                <code>
-                                    2.127659574%
-                                </code>
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>
+            <div class="span6">
+            <fieldset>
+            <h2 id="grid">Grid system</h2>
+            <div class="control-group">
+            <label class="control-label" for="gridColumns">@gridColumns</label>
+            <div class="controls">
+            <code>
+            12
+            </code>
             </div>
+            </div>
+            <div class="control-group">
+            <label class="control-label" for="gridColumnWidth">@gridColumnWidth</label>
+            <div class="controls">
+            <code>
+            60px
+            </code>
+            </div>
+            </div>
+            <div class="control-group">
+            <label class="control-label" for="gridGutterWidth">@gridGutterWidth</label>
+            <div class="controls">
+            <code>
+            20px
+            </code>
+            </div>
+            </div>
+            <div class="control-group">
+            <label class="control-label" for="fluidGridColumnWidth">@fluidGridColumnWidth</label>
+            <div class="controls">
+            <code>
+            6.382978723
+            </code>
+            </div>
+            </div>
+            <div class="control-group">
+            <label class="control-label" for="fluidGridGutterWidth">@fluidGridGutterWidth</label>
+            <div class="controls">
+            <code>
+            2.127659574%
+            </code>
+            </div>
+            </div>
+            </fieldset>
+            </div>
+            </div>-->
             <div class="row">
                 <div class="span6">
                     <h2 id="typography">Typography</h2>
@@ -196,137 +197,151 @@
                 </div>
                 <div class="span6">
                     <h2>Grayscale Examples</h2>
-                    <button class="btn">A Button</button>
+                    <button class="btn">
+                        A Button
+                    </button>
+                    <form class="well" disabled="true">
+                        <label>Label name</label>
+                        <input type="text" class="span3" placeholder="Type something…">
+                        <span class="help-inline">Associated help text!</span>
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            Check me out </label>
+                        <button type="submit" class="btn">
+                            Submit
+                        </button>
+                    </form><br>
+                    <span class="label">Default</span>
                 </div>
             </div>
             <!--
             <div class="row">
-                <div class="span6">
-                    <h2 id="accent">Accent colors</h2>
-                    <fieldset>
-                        <div class="control-group">
-                            <label class="control-label" for="blue">@blue</label>
-                            <div class="controls">
-                                <input type="text" name="blue" value="#049cdb" class="color input-mini">
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label" for="green">@green</label>
-                            <div class="controls">
-                                <input type="text" name="green" value="#46a546" class="color input-mini">
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label" for="red">@red</label>
-                            <div class="controls">
-                                <input type="text" name="red" value="#9d261d" class="color input-mini">
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label" for="yellow">@yellow</label>
-                            <div class="controls">
-                                <input type="text" name="yellow" value="#ffc40d" class="color input-mini">
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label" for="orange">@orange</label>
-                            <div class="controls">
-                                <input type="text" name="orange" value="#f89406" class="color input-mini">
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label" for="pink">@pink</label>
-                            <div class="controls">
-                                <input type="text" name="pink" value="#c3325f" class="color input-mini">
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label" for="purple">@purple</label>
-                            <div class="controls">
-                                <input type="text" name="purple" value="#7a43b6" class="color input-mini">
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>
-                
-                <div class="span6">
-                    <h2>Accent Examples</h2>
-                    <form class="form-horizontal">
-                        <fieldset>
-                            <legend>
-                                Legend
-                            </legend>
-                            <div class="control-group">
-                                <label class="control-label" for="focusedInput">Focused input</label>
-                                <div class="controls">
-                                    <input class="input-xlarge focused" id="focusedInput" type="text" value="This is focused…">
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label">Uneditable input</label>
-                                <div class="controls">
-                                    <span class="input-xlarge uneditable-input">Some value here</span>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label" for="disabledInput">Disabled input</label>
-                                <div class="controls">
-                                    <input class="input-xlarge disabled" id="disabledInput" type="text" placeholder="Disabled input here…" disabled="">
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label" for="optionsCheckbox2">Disabled checkbox</label>
-                                <div class="controls">
-                                    <label class="checkbox">
-                                        <input type="checkbox" id="optionsCheckbox2" value="option1" disabled="">
-                                        This is a disabled checkbox </label>
-                                </div>
-                            </div>
-                            <div class="control-group warning">
-                                <label class="control-label" for="inputWarning">Input with warning</label>
-                                <div class="controls">
-                                    <input type="text" id="inputWarning">
-                                    <span class="help-inline">Something may have gone wrong</span>
-                                </div>
-                            </div>
-                            <div class="control-group error">
-                                <label class="control-label" for="inputError">Input with error</label>
-                                <div class="controls">
-                                    <input type="text" id="inputError">
-                                    <span class="help-inline">Please correct the error</span>
-                                </div>
-                            </div>
-                            <div class="control-group success">
-                                <label class="control-label" for="inputSuccess">Input with success</label>
-                                <div class="controls">
-                                    <input type="text" id="inputSuccess">
-                                    <span class="help-inline">Woohoo!</span>
-                                </div>
-                            </div>
-                            <div class="control-group success">
-                                <label class="control-label" for="selectError">Select with success</label>
-                                <div class="controls">
-                                    <select id="selectError">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </select>
-                                    <span class="help-inline">Woohoo!</span>
-                                </div>
-                            </div>
-                            <div class="form-actions">
-                                <button type="submit" class="btn btn-primary">
-                                    Save changes
-                                </button>
-                                <button class="btn">
-                                    Cancel
-                                </button>
-                            </div>
-                        </fieldset>
-                    </form>
-                </div>
+            <div class="span6">
+            <h2 id="accent">Accent colors</h2>
+            <fieldset>
+            <div class="control-group">
+            <label class="control-label" for="blue">@blue</label>
+            <div class="controls">
+            <input type="text" name="blue" value="#049cdb" class="color input-mini">
+            </div>
+            </div>
+            <div class="control-group">
+            <label class="control-label" for="green">@green</label>
+            <div class="controls">
+            <input type="text" name="green" value="#46a546" class="color input-mini">
+            </div>
+            </div>
+            <div class="control-group">
+            <label class="control-label" for="red">@red</label>
+            <div class="controls">
+            <input type="text" name="red" value="#9d261d" class="color input-mini">
+            </div>
+            </div>
+            <div class="control-group">
+            <label class="control-label" for="yellow">@yellow</label>
+            <div class="controls">
+            <input type="text" name="yellow" value="#ffc40d" class="color input-mini">
+            </div>
+            </div>
+            <div class="control-group">
+            <label class="control-label" for="orange">@orange</label>
+            <div class="controls">
+            <input type="text" name="orange" value="#f89406" class="color input-mini">
+            </div>
+            </div>
+            <div class="control-group">
+            <label class="control-label" for="pink">@pink</label>
+            <div class="controls">
+            <input type="text" name="pink" value="#c3325f" class="color input-mini">
+            </div>
+            </div>
+            <div class="control-group">
+            <label class="control-label" for="purple">@purple</label>
+            <div class="controls">
+            <input type="text" name="purple" value="#7a43b6" class="color input-mini">
+            </div>
+            </div>
+            </fieldset>
+            </div>
+
+            <div class="span6">
+            <h2>Accent Examples</h2>
+            <form class="form-horizontal">
+            <fieldset>
+            <legend>
+            Legend
+            </legend>
+            <div class="control-group">
+            <label class="control-label" for="focusedInput">Focused input</label>
+            <div class="controls">
+            <input class="input-xlarge focused" id="focusedInput" type="text" value="This is focused…">
+            </div>
+            </div>
+            <div class="control-group">
+            <label class="control-label">Uneditable input</label>
+            <div class="controls">
+            <span class="input-xlarge uneditable-input">Some value here</span>
+            </div>
+            </div>
+            <div class="control-group">
+            <label class="control-label" for="disabledInput">Disabled input</label>
+            <div class="controls">
+            <input class="input-xlarge disabled" id="disabledInput" type="text" placeholder="Disabled input here…" disabled="">
+            </div>
+            </div>
+            <div class="control-group">
+            <label class="control-label" for="optionsCheckbox2">Disabled checkbox</label>
+            <div class="controls">
+            <label class="checkbox">
+            <input type="checkbox" id="optionsCheckbox2" value="option1" disabled="">
+            This is a disabled checkbox </label>
+            </div>
+            </div>
+            <div class="control-group warning">
+            <label class="control-label" for="inputWarning">Input with warning</label>
+            <div class="controls">
+            <input type="text" id="inputWarning">
+            <span class="help-inline">Something may have gone wrong</span>
+            </div>
+            </div>
+            <div class="control-group error">
+            <label class="control-label" for="inputError">Input with error</label>
+            <div class="controls">
+            <input type="text" id="inputError">
+            <span class="help-inline">Please correct the error</span>
+            </div>
+            </div>
+            <div class="control-group success">
+            <label class="control-label" for="inputSuccess">Input with success</label>
+            <div class="controls">
+            <input type="text" id="inputSuccess">
+            <span class="help-inline">Woohoo!</span>
+            </div>
+            </div>
+            <div class="control-group success">
+            <label class="control-label" for="selectError">Select with success</label>
+            <div class="controls">
+            <select id="selectError">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            </select>
+            <span class="help-inline">Woohoo!</span>
+            </div>
+            </div>
+            <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+            Save changes
+            </button>
+            <button class="btn">
+            Cancel
+            </button>
+            </div>
+            </fieldset>
+            </form>
+            </div>
             </div>
             -->
             <div class="row">
@@ -407,10 +422,15 @@
                 <div class="span6">
                     <h3>Navbar example</h3>
                     <div class="navbar">
+                        
                         <div class="navbar-inner">
+                            
                             <div class="container">
+                                
                                 <div class="nav-collapse">
+                                    
                                     <ul class="nav">
+                                        <li><span class="navbar-text">Text</span></li>
                                         <li class="active">
                                             <a href="#">Item1</a>
                                         </li>
@@ -514,6 +534,12 @@
                         <a class="close" data-dismiss="alert">×</a>
                         <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
                     </div>
+                    <h4>Labels</h4>
+                    <span class="label label-success">Success</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-important">Important</span>
+<span class="label label-info">Info</span>
+
                 </div>
             </div><!-- /row -->
         </section>
