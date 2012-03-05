@@ -11,7 +11,11 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <% if (id) { %>
+    <link rel='stylesheet' href='/css/<%=id%>'>
+    <% } else { %>
     <link rel='stylesheet' href='/css/bootstrap.css'>
+    <% } %>
     <link rel='stylesheet' href='/css/jquery.miniColors.css'>
     <style>
         input{

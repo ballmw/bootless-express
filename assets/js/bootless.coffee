@@ -31,3 +31,5 @@ class App.BootlessView extends Backbone.View
       $('#css').attr('disabled', false)
       $('#less').attr('href', "/less/#{data.stylesheet}")
       $('#less').attr('disabled', false)
+      $('#link').attr('href', "/#{data.stylesheet}")
+      $('#link').attr('disabled', false)
