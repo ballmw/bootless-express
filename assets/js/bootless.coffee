@@ -1,4 +1,4 @@
-window.App = new Object()
+App = new Object()
 $ () ->
   class App.BootlessView extends Backbone.View
     constructor : ( @el_id ) ->
